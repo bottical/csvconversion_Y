@@ -27,10 +27,10 @@ function processCsv(csvContent) {
     const newHeaders = ['oder', '1', '2', 'ship', '4', '5', '6', '7', '8', '9', '10']; // 新しいヘッダー
     rows[0] = newHeaders.join(',');
 
-    // ヘッダーとデータ行の両方で、2列目と4列目のみを保持
+    // ヘッダーとデータ行の両方で、1列目と4列目のみを保持
     const processedRows = rows.map(row => {
         const columns = row.split(',');
-        return [columns[0], columns[3]].join(','); // 2列目と4列目のみ選択
+        return [columns[0], columns[3]].join(','); // 1列目と4列目のみ選択
     });
 
     return processedRows.join('\n');
